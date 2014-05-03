@@ -14,19 +14,13 @@ Welcome to Tweetalytics! This is a tool for collecting and analyzing tweets.
 
 5\. Create an Access Token
 
-6\. Install oauth
-
-```bash
-sudo gem i oauth
-```
-
-7\. Install twurl
+6\. Install twurl
 
 ```bash
 sudo gem i twurl
 ```
 
-8\. Begin the authorization of your Twitter account to make API requests
+7\. Begin the authorization of your Twitter account to make API requests
 
 ```bash
 twurl authorize --consumer-key key --consumer-secret secret
@@ -36,13 +30,13 @@ twurl authorize --consumer-key key --consumer-secret secret
 
 * `secret` is your application's consumer-secret
 
-9\. Enter the returned URL into your browser
+8\. Enter the returned URL into your browser
 
-10\. Click "Authorize app"
+9\. Click "Authorize app"
 
-11\. Enter the returned PIN back into the terminal
+10\. Enter the returned PIN back into the terminal
 
-12\. <a href="https://github.com/tweetalytics/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
+11\. <a href="https://github.com/tweetalytics/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
 
 ## Getting Started ##
 
@@ -135,7 +129,7 @@ For example:
 For example:
 
 ```ruby
->>> post("Hello World!")
+> post("Hello World!")
 ```
 
 ## License ##
