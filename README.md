@@ -26,9 +26,9 @@ sudo gem i twurl
 twurl authorize --consumer-key key --consumer-secret secret
 ```
 
-* `key` is your application's consumer-key
+* `key` is your application's api-key
 
-* `secret` is your application's consumer-secret
+* `secret` is your application's api-secret
 
 8\. Enter the returned URL into your browser
 
