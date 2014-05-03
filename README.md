@@ -4,23 +4,29 @@ Welcome to Tweetalytics! This is a tool for collecting and analyzing tweets.
 
 ## Setup ##
 
-1\. <a href="https://twitter.com/signup" target="_blank">Create a Twitter Account</a>
+1\. Install RVM (Ruby Version Manager) with the latest stable version of Ruby
 
-2\. <a href="https://dev.twitter.com/apps" target="_blank">Sign into Twitter Developers with your Twitter Account</a>
+```bash
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
+```
 
-3\. Create a Twitter Application
+2\. <a href="https://twitter.com/signup" target="_blank">Create a Twitter Account</a>
 
-4\. Set the Access Level to "Read and write"
+3\. <a href="https://dev.twitter.com/apps" target="_blank">Sign into Twitter Developers with your Twitter Account</a>
 
-5\. Create an Access Token
+4\. Create a Twitter Application
 
-6\. Install twurl
+5\. Set the Access Level to "Read and write"
+
+6\. Create an Access Token
+
+7\. Install twurl
 
 ```bash
 sudo gem i twurl
 ```
 
-7\. Begin the authorization of your Twitter account to make API requests
+8\. Begin the authorization of your Twitter account to make API requests
 
 ```bash
 twurl authorize --consumer-key key --consumer-secret secret
@@ -30,13 +36,13 @@ twurl authorize --consumer-key key --consumer-secret secret
 
 * `secret` is your application's api-secret
 
-8\. Enter the returned URL into your browser
+9\. Enter the returned URL into your browser
 
-9\. Click "Authorize app"
+10\. Click "Authorize app"
 
-10\. Enter the returned PIN back into the terminal
+11\. Enter the returned PIN back into the terminal
 
-11\. <a href="https://github.com/tweetalytics/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
+12\. <a href="https://github.com/tweetalytics/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
 
 ## Getting Started ##
 
@@ -140,4 +146,4 @@ Copyright (c) 2014 Paul Land
 
 ## Problems ##
 
-If you find any issues please [report them](https://github.com/tweetalytics/tweetalytics/issues) or send a [pull request](https://github.com/tweetalytics/tweetalytics/pulls).
+If you find any issues please [report them](https://github.com/paul-land/tweetalytics/issues) or send a [pull request](https://github.com/paul-land/tweetalytics/pulls).
