@@ -12,7 +12,7 @@ include Processor
 # Description: This function tests whether the resulting output of remove_urls
 # in the process module matches the expected output.
 def remove_urls_test(json_test_file, expected_output)
-  tweets = load(json_test_file, "test/")
+  tweets = load(json_test_file, "tests/")
   resulting_output = remove_urls(tweets)
   if resulting_output == expected_output
     return "Passed"

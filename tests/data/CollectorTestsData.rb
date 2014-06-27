@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require './app/Collector'
-require './test/CollectorTests'
+require './tests/CollectorTests'
 require 'stringio'
 
 Expected_Output = [

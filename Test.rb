@@ -3,12 +3,12 @@
 # Module: Test
 # Description: Run the application tests.
 
-require './test/CollectorTests'
-require './test/LoaderTests'
-require './test/ProcessorTests'
-require './test/AnalyzerTests'
-require './test/data/CollectorTestsData'
-require './test/data/ProcessorTestsData'
+require './tests/CollectorTests'
+require './tests/LoaderTests'
+require './tests/ProcessorTests'
+require './tests/AnalyzerTests'
+require './tests/data/CollectorTestsData'
+require './tests/data/ProcessorTestsData'
 
 # CollectorTests
 
@@ -18,10 +18,6 @@ puts "CollectorTests"
 
 puts "  Collect Tests"
 collect_test(Collected_Output)
-
-# LoaderTests
-
-puts "LoaderTests"
 
 # ProcessorTests
 
@@ -44,7 +40,3 @@ real_output = Real_Extract_Words_Output
 for i in (0...real_output.length)
   puts "    Test #{i + 1}: " + extract_words_test(input_list[i], real_output[i])
 end
-
-# AnalyzerTests
-
-puts "AnalyzerTests"

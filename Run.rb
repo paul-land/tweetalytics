@@ -16,7 +16,7 @@ include Analyzer
 include Poster
 include BoundingBox
 
-$json_file = "SampleTweets2"
+$json_file = "SampleTweets"
 
 $tweets = Loader.load($json_file)
 $en_lang_tweets = Processor.get_en_lang($tweets)
@@ -40,5 +40,3 @@ $character_statistics = Analyzer.character_analysis($raw_text)
 
 $top_5_processed_text = Analyzer.top_words(5, $processed_text)
 $top_5_delimited_raw_text = Analyzer.top_words(5, $delimited_raw_text)
-
-# puts $top_5_processed_text

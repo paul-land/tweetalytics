@@ -49,7 +49,7 @@ twurl authorize --consumer-key key --consumer-secret secret
 To begin using this tool, make sure your current directory is the tweetalytics repository and type in the following command:
 
 ```bash
-irb -r ./Run.rb
+make
 ```
 
 ### Collect Tweets ###
