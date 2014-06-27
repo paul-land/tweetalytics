@@ -99,7 +99,6 @@ module Processor
   def remove_urls(tweets)
     no_urls_text_array = Array.new
     delimited_text = delimit_text(tweets)
-    # delimited_text = delimit_text(get_raw_text(tweets))
     for i in (0...delimited_text.length)
       for url in tweets[i]["entities"]["urls"]
         delimited_text[i].delete(url["url"])

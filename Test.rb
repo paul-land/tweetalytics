@@ -4,9 +4,7 @@
 # Description: Run the application tests.
 
 require './tests/CollectorTests'
-require './tests/LoaderTests'
 require './tests/ProcessorTests'
-require './tests/AnalyzerTests'
 require './tests/data/CollectorTestsData'
 require './tests/data/ProcessorTestsData'
 

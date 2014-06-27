@@ -2,31 +2,31 @@
 
 Real_Remove_Urls_Output = [
 [
-" ",
-"Hello  ",
-" Hello ",
-"  Hello",
-"Hello  Hello ",
-"Hello   Hello",
-" Hello  Hello",
-"Hello  Hello  Hello"
+"",
+"Hello",
+"Hello",
+"Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello Hello"
 ],
-["  ",
-"Hello   ",
-" Hello  ",
-"  Hello ",
-"   Hello",
-"Hello  Hello  ",
-"Hello   Hello ",
-"Hello    Hello",
-" Hello  Hello ",
-" Hello   Hello",
-"  Hello  Hello",
-"Hello  Hello  Hello ",
-"Hello  Hello   Hello",
-"Hello   Hello  Hello",
-" Hello  Hello  Hello",
-"Hello  Hello  Hello  Hello"
+["",
+"Hello",
+"Hello",
+"Hello",
+"Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello",
+"Hello Hello Hello",
+"Hello Hello Hello",
+"Hello Hello Hello",
+"Hello Hello Hello",
+"Hello Hello Hello Hello"
 ]
 ]
 
@@ -41,5 +41,5 @@ Real_Extract_Words_Output = [
 ['anything', 'else', 'not', 'my', 'job'],
 ['i', 'love', 'my', 'job', 'winning'],
 ['make', 'justin', 'by', 'tweeting', 'vma', 'justinbieber'],
-['paperclips', 'they', 're', 'so', 'awesome', 'cool', 'useful']
+['paperclips', "they're", 'so', 'awesome', 'cool', 'useful']
 ]

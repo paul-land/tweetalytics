@@ -34,8 +34,3 @@ def collect_the_output(i, number_of_tweets=nil, filename=nil, stream_type=nil)
   output_array = [output.string, Expected_Output[i]]
   return output_array
 end
-
-
-def convert_bounding_box_test()
-  pass
-end
