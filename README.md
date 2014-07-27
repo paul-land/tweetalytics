@@ -42,7 +42,7 @@ twurl authorize --consumer-key key --consumer-secret secret
 
 11\. Enter the returned PIN back into the terminal
 
-12\. <a href="https://github.com/tweetalytics/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
+12\. <a href="https://github.com/paul-land/tweetalytics/archive/master.zip" target="_blank">Download this repository</a>
 
 ## Getting Started ##
 
