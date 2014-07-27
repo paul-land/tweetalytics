@@ -46,10 +46,10 @@ twurl authorize --consumer-key key --consumer-secret secret
 
 ## Getting Started ##
 
-To begin using this tool, make sure your current directory is the tweetalytics repository and type in the following command:
+To begin using this tool, make sure you are in the tweetalytics repository and type in the following command:
 
 ```bash
-make
+$ make
 ```
 
 ### Collect Tweets ###
