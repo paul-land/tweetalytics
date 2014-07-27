@@ -176,13 +176,6 @@ module Analyzer
 
   # Finds the next a words after a keyword in space_delimited_text
   # Returns an Array of Arrays of Strings
-  # space_delimited_text = ["Hello", "my", "name", "is", "Hello", "Bitch", "My", "Name"]
-  # space_delimited_text2 = ["Yo", "Yo", "Yo", "Hello", "Yo", "Yo", "Yo"]
-  # keyword = "Hello"
-  # words_around_keyword_tweet(keyword, space_delimited_text, 3)
-  # => [["Hello", "my", "name", "is"], ["Hello", "Bitch", "My", "Name"]]
-  # words_around_keyword_tweet(keyword, space_delimited_text2, 3)
-  # => [["Hello", "Yo", "Yo", "Yo"]]
   def words_around_keyword_tweet(keyword, space_delimited_text, a)
     set = Array.new
     keyword_indices = space_delimited_text.find_each_index(keyword)
@@ -204,10 +197,6 @@ module Analyzer
 
   # Finds the next a words after a keyword across a set of tweets
   # Returns an Array of Arrays of Arrays of Strings
-  # processed_text = [["Hello", "my", "name", "is", "Hello", "Bitch", "My", "Name"], ["Yo", "Yo", "Yo", "Hello", "Yo", "Yo", "Yo"]]
-  # keyword = "Hello"
-  # words_around_keyword(keyword, processed_text, 3)
-  # => [[["Hello", "my", "name", "is"], ["Hello", "Bitch", "My", "Name"]], [["Hello", "Yo", "Yo", "Yo"]]]
   def words_around_keyword(keyword, processed_text, a)
     set = Array.new
     i = 0
