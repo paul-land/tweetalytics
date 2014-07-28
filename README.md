@@ -1,6 +1,6 @@
 # Tweetalytics #
 
-Welcome to Tweetalytics! This is a tool for collecting and analyzing tweets.
+Welcome to Tweetalytics! This is a simplified interface to Twitter’s Streaming API for collecting and analyzing tweets.
 
 ## Setup ##
 
