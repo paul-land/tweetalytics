@@ -28,37 +28,159 @@
         </ul>
       </header>
       <section>
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
+        <h1>
+<a name="tweetalytics" class="anchor" href="#tweetalytics"><span class="octicon octicon-link"></span></a>Tweetalytics</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>Welcome to Tweetalytics!</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>1. Install RVM (Ruby Version Manager) with the latest stable version of Ruby</p>
+
+<div class="highlight highlight-bash"><pre><span class="se">\c</span>url -sSL https://get.rvm.io <span class="p">|</span> bash -s stable --ruby
+</pre></div>
+
+<p>2. <a href="https://twitter.com/signup" target="_blank">Create a Twitter Account</a></p>
+
+<p>3. <a href="https://dev.twitter.com/user/login?destination=home" target="_blank">Sign into Twitter Developers with your Twitter Account</a></p>
+
+<p>4. Create a Twitter Application</p>
+
+<p>5. Set the Access Level to "Read and write"</p>
+
+<p>6. Create an Access Token</p>
+
+<p>7. Install twurl</p>
+
+<div class="highlight highlight-bash"><pre>sudo gem i twurl
+</pre></div>
+
+<p>8. Begin the authorization of your Twitter account to make API requests</p>
+
+<div class="highlight highlight-bash"><pre>twurl authorize --consumer-key key --consumer-secret secret
+</pre></div>
+
+<ul>
+<li><p><code>key</code> is your application's api-key</p></li>
+<li><p><code>secret</code> is your application's api-secret</p></li>
+</ul><p>9. Enter the returned URL into your browser</p>
+
+<p>10. Click "Authorize app"</p>
+
+<p>11. Enter the returned PIN back into the terminal</p>
+
+<p>12. <a href="https://github.com/paul-land/tweetalytics/archive/master.zip" target="_blank">Download this repository</a></p>
+
+<h2>
+<a name="getting-started" class="anchor" href="#getting-started"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<p>To begin using this tool, make sure you are in the tweetalytics repository and type in the following command:</p>
+
+<div class="highlight highlight-bash"><pre>make
+</pre></div>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="collect-tweets" class="anchor" href="#collect-tweets"><span class="octicon octicon-link"></span></a>Collect Tweets</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>There are two ways to collect tweets: first, by specifying a bounding box, which is an array that consists of bottom-left-longitude, bottom-left-latitude, top-right-longitude, and top-right-latitude coordinates, and second, by specifying a certain keyword you want to track.</p>
+
+<h4>
+<a name="how-to-stream-tweets-from-a-certain-location" class="anchor" href="#how-to-stream-tweets-from-a-certain-location"><span class="octicon octicon-link"></span></a>How to stream tweets from a certain location</h4>
+
+<p>Use the collect function and specify how many tweets you want, the name of the file you will create, and a bounding box.</p>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">collect</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s2">"tweets"</span><span class="p">,</span> <span class="no">United_States</span><span class="p">)</span>
+</pre></div>
+
+<h4>
+<a name="how-to-track-a-certain-keyword" class="anchor" href="#how-to-track-a-certain-keyword"><span class="octicon octicon-link"></span></a>How to track a certain keyword</h4>
+
+<p>Use the collect function and specify how many tweets you want, the name of the file you will create, and the keyword.</p>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">collect</span><span class="p">(</span><span class="mi">25</span><span class="p">,</span> <span class="s2">"tweets"</span><span class="p">,</span> <span class="s2">"twitter"</span><span class="p">)</span>
+</pre></div>
 
 <h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<a name="load-tweets" class="anchor" href="#load-tweets"><span class="octicon octicon-link"></span></a>Load Tweets</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>The next thing to do is to load the tweets you just collected into Ruby.</p>
+
+<h4>
+<a name="how-to-load-tweets-in-a-json-file-into-ruby" class="anchor" href="#how-to-load-tweets-in-a-json-file-into-ruby"><span class="octicon octicon-link"></span></a>How to load tweets in a JSON file into Ruby</h4>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">tweets</span> <span class="o">=</span> <span class="nb">load</span><span class="p">(</span><span class="s2">"tweets"</span><span class="p">)</span>
+</pre></div>
 
 <h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
+<a name="process-tweets" class="anchor" href="#process-tweets"><span class="octicon octicon-link"></span></a>Process Tweets</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>Now process the tweets you just loaded in.</p>
+
+<h4>
+<a name="how-to-process-tweets" class="anchor" href="#how-to-process-tweets"><span class="octicon octicon-link"></span></a>How to process tweets</h4>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">processed_text</span> <span class="o">=</span> <span class="n">process</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
+</pre></div>
+
+<p>or if you don't want to process the tweets:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">raw_text</span> <span class="o">=</span> <span class="n">get_raw_text</span><span class="p">(</span><span class="n">tweets</span><span class="p">)</span>
+</pre></div>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="analyze-tweets" class="anchor" href="#analyze-tweets"><span class="octicon octicon-link"></span></a>Analyze Tweets</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p>Then analyze the tweets.</p>
+
+<h4>
+<a name="how-to-run-a-character-analysis" class="anchor" href="#how-to-run-a-character-analysis"><span class="octicon octicon-link"></span></a>How to run a character analysis</h4>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">character_statistics</span> <span class="o">=</span> <span class="n">character_analysis</span><span class="p">(</span><span class="n">raw_text</span><span class="p">)</span>
+</pre></div>
+
+<h4>
+<a name="how-to-find-the-most-popular-words-in-a-set-of-tweets" class="anchor" href="#how-to-find-the-most-popular-words-in-a-set-of-tweets"><span class="octicon octicon-link"></span></a>How to find the most popular words in a set of tweets.</h4>
+
+<p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">most_popular_words</span> <span class="o">=</span> <span class="n">top_words</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">processed_text</span><span class="p">)</span>
+</pre></div>
+
+<h3>
+<a name="commands-for-fun" class="anchor" href="#commands-for-fun"><span class="octicon octicon-link"></span></a>Commands for fun</h3>
+
+<h4>
+<a name="how-to-post-a-tweet" class="anchor" href="#how-to-post-a-tweet"><span class="octicon octicon-link"></span></a>How to post a tweet</h4>
+
+<ul>
+<li>Use the post function and specify your tweet.</li>
+</ul><p>For example:</p>
+
+<div class="highlight highlight-ruby"><pre><span class="o">&gt;</span> <span class="n">post</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
+</pre></div>
+
+<h2>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h2>
+
+<p>The MIT License (MIT)</p>
+
+<p>Copyright (c) 2014 Paul Land</p>
+
+<h2>
+<a name="problems" class="anchor" href="#problems"><span class="octicon octicon-link"></span></a>Problems</h2>
+
+<p>If you find any issues please <a href="https://github.com/paul-land/tweetalytics/issues">report them</a> or send a <a href="https://github.com/paul-land/tweetalytics/pulls">pull request</a>.</p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/paul-land">paul-land</a></p>
