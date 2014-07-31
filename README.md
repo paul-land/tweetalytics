@@ -130,7 +130,7 @@ For example:
 
 #### How to post a tweet ####
 
-* Use the post function and specify your tweet.
+Use the post function and specify your tweet.
 
 For example:
 
