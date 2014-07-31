@@ -1,6 +1,6 @@
 # Tweetalytics #
 
-Welcome to Tweetalytics! This is a simplified interface to Twitter’s Streaming API for collecting and analyzing tweets.
+Welcome to Tweetalytics!
 
 ## Setup ##
 
@@ -49,7 +49,7 @@ twurl authorize --consumer-key key --consumer-secret secret
 To begin using this tool, make sure you are in the tweetalytics repository and type in the following command:
 
 ```bash
-$ make
+make
 ```
 
 ### Collect Tweets ###
@@ -73,7 +73,7 @@ Use the collect function and specify how many tweets you want, the name of the f
 For example:
 
 ```ruby
-> collect(25, "tweets", "obama")
+> collect(25, "tweets", "twitter")
 ```
 
 ### Load Tweets ###

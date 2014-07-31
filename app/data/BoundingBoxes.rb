@@ -1,8 +1,8 @@
 #!/usr/bin/env ruby
 
-# bounding_boxes
+# Bounding Boxes
 
-module BoundingBox
+module BoundingBoxes
 
   World = [-180, -90, 180, 90]
   United_States = [-123.587952, 25.165173, -66.810608, 48.980217]

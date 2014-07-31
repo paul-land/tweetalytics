@@ -31,15 +31,15 @@ Real_Remove_Urls_Output = [
 ]
 
 Extract_Words_Input = [
-'anything else.....not my job',
-'i love my job. #winning',
-'make justin # 1 by tweeting #vma #justinbieber :)',
-"paperclips! they're so awesome, cool, & useful!"
+'hello hello. #hello',
+'hello hello.....hello',
+"hello! we're so hello, & hello!",
+'# 1 hello in twitter #hello #hello :)'
 ]
 
 Real_Extract_Words_Output = [
-['anything', 'else', 'not', 'my', 'job'],
-['i', 'love', 'my', 'job', 'winning'],
-['make', 'justin', 'by', 'tweeting', 'vma', 'justinbieber'],
-['paperclips', "they're", 'so', 'awesome', 'cool', 'useful']
+['hello', 'hello', 'hello'],
+['hello', 'hello', 'hello'],
+['hello', "we're", 'so', 'hello', 'hello'],
+['hello', 'in', 'twitter', 'hello', 'hello']
 ]

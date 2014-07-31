@@ -30,7 +30,7 @@ module Collector
     pid = Process.spawn(cmd)
     while true
       number_of_lines = IO.readlines("data/#{new_filename}.json").length
-      if number_of_lines >= number_of_tweets
+      if number_of_lines > number_of_tweets
         Process.detach(pid)
         Process.detach(pid + 1)
         Process.kill("SIGKILL", pid)
@@ -40,9 +40,7 @@ module Collector
     end
     file.close
     number_of_lines = IO.readlines("data/#{new_filename}.json").length
-    if number_of_lines > number_of_tweets
-      remove(number_of_tweets, new_filename)
-    end
+    remove(number_of_tweets, new_filename)
     File.rename("data/#{new_filename}.json", "data/#{filename}.json")
     puts "Successful!"
     puts "#{number_of_tweets} tweets collected."
