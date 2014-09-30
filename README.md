@@ -12,7 +12,7 @@ Welcome to Tweetalytics!
 
 2\. <a href="https://twitter.com/signup" target="_blank">Create a Twitter Account</a>
 
-3\. <a href="https://dev.twitter.com/user/login?destination=home" target="_blank">Sign into Twitter Developers with your Twitter Account</a>
+3\. <a href="https://apps.twitter.com/" target="_blank">Sign into Twitter Developers with your Twitter Account</a>
 
 4\. Create a Twitter Application
 
