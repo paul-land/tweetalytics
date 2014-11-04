@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Module: Loader
-# Description: This module loads a json file of tweets into Python.
+# Description: This module loads a json file of tweets into Ruby.
 
 require 'json'
 
