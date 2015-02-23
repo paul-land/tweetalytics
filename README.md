@@ -142,7 +142,7 @@ For example:
 
 The MIT License (MIT)
 
-Copyright (c) 2014 Paul Land
+Copyright (c) 2015 Paul Land
 
 ## Problems ##
 
